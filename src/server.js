@@ -13,7 +13,6 @@ server.use('/auth', require('./routes/authRoutes'));
 
 //-----------------------------------------------------
 
-
 //init server
 server.listen(3001, ()=>{
     console.log('API RUNNING AT 3001');
