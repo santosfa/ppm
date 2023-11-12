@@ -1,0 +1,6 @@
+{
+    "invalidPageNumber": "Número de página esta fuera del rango valido.",
+    "noCustomers": "No hay clientes registrados.",
+    "errorListingCustomers": "Se produjo un error al listar los clientes.",
+    "success": "Operación exitosa"
+  }

@@ -1,0 +1,9 @@
+{
+
+    "pageNotFound": "Page number out of valid range.",
+    "noDataFound": "No records were found with the specified criteria.",
+    "duplicatedId": "Duplicate Contract id.",
+    "invalidJsonFormat": "Invalid JSON format in the request payload."
+
+
+}

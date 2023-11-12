@@ -1,0 +1,27 @@
+{
+  "invalidPageNumber": "Número de página fora do intervalo válido.",
+  "noCustomers": "Nenhum cliente registrado.",
+  "errorListingCustomers": "Ocorreu um erro ao listar os clientes.",
+  "success": "Sucesso",
+  "customerFound": "Cliente encontrado.",
+  "customerNotFound": "Cliente não encontrado.",
+  "errorFindingCustomer": "Ocorreu um erro ao encontrar o cliente.",
+  "errorCreatingCustomer": "Ocorreu um erro ao criar o cliente.",
+  "errorUpdatingCustomer": "Ocorreu um erro ao atualizar o cliente.",
+  "errorDeletingCustomer": "Ocorreu um erro ao excluir o cliente.",
+  "customerCreated": "Cliente criado.",
+  "customerUpdated": "Cliente atualizado.",
+  "customerDeleted": "Cliente excluído.",
+  
+  "invalidCustomer": "Cliente inválido.",
+  "invalidCustomerName": "Nome de cliente inválido.",
+  "invalidCustomerEmail": "E-mail de cliente inválido.",
+  "invalidCustomerPhone": "Telefone de cliente inválido.",
+  "invalidCustomerAddress": "Endereço de cliente inválido.",
+  "invalidCustomerCity": "Cidade de cliente inválida.",
+  "invalidCustomerState": "Estado de cliente inválido.",
+  "invalidCustomerZip": "CEP de cliente inválido.",
+  "invalidCustomerCountry": "País de cliente inválido.",
+  "invalidCustomerNotes": "Notas de cliente inválidas.",
+  "invalidCustomerStatus": "Status de cliente inválido."
+  }
