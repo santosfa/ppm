@@ -5,13 +5,13 @@ const authController    = require('../controller/authController');
 const router            = express.Router(); 
 
 //register
-router.post('/registrar-usuario',        authController.register);
+router.post('/registrar-usuario',authController.register);
 //authenticate
-router.post('/autenticar-usuario',         authController.authenticate);
+router.post('/autenticar-usuario',authController.authenticate);
 //forgot password
-router.post('/esqueci-senha',             authController.forgotPassword);
+router.post('/esqueci-senha',authController.forgotPassword);
 //reset password
-router.post('/resetar-senha',             authController.resetPassword);
+router.post('/resetar-senha',authController.resetPassword);
 
 
 

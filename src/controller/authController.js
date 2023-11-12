@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const mailer = require('../modules/mailer');
 
-const User = require('../model/userModel');
+const User = require('../model/user/userModel');
 const authConfig = require('../config/auth.json');
 const msg = require('../utils/message');
 
@@ -59,7 +59,7 @@ class authController {
                     msg.resp(null, "Usuário não encontrado.", 400)
                 );
             }else{
-                console.log("O usuário existe");
+                console.log("Pesquisando usuário");
                 if (!await bcrypt.compare(password, user.password)){
                     return res.status(400).json(
                         msg.resp(null, "Senha incorreta.", 400)
@@ -168,20 +168,6 @@ class authController {
             );
         }
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 module.exports = new authController();
