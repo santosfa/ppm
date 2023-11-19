@@ -18,6 +18,7 @@ server.use('/health',   require('./routes/healthRoutes'));
 server.use('/customer', require('./routes/customer/customerRoutes'));
 server.use('/contract', require('./routes/contract/contractRoutes'));
 server.use('/location', require('./routes/location/locationRoutes'));
+server.use('/projectPlan', require('./routes/projectPlan/projectPlanRoutes'));
 
 
 // Middleware para lidar com rotas não encontradas

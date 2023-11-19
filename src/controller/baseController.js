@@ -30,8 +30,6 @@ class BaseController {
       const modelService = new GenericModelService(modelName);
       const result = await operationFn(modelService);
 
-      console.log("result", result);
-
       if (result && result.data) {
         const responseData = Array.isArray(result.data)
           ? result.data
@@ -88,7 +86,6 @@ class BaseController {
     }
 
     const errorMessage = i18nMessages[errorMessageKey];
-
     return res.status(statusCode).json({
       message: errorMessage,
       statusCode
@@ -128,11 +125,8 @@ class BaseController {
     });
   }
 
-  
-
   async listByField(req, res, modelName, field, value) {
     const i18nMessages = this.loadI18nMessages(req.query.lang || "en");
-
     return this.executeOperation(req, res, modelName, async model => {
       let query = {};
 
@@ -149,16 +143,13 @@ class BaseController {
         const data = await model.listByField(query);
         const totalItemCount =
           field === "_id" ? 1 : await model.getTotalCountByField(query);
-
         const responseData = Array.isArray(data) ? data : [data];
-
         if (!data || responseData.length === 0) {
           return {
             message: i18nMessages[`noDataFound`],
             statusCode: 404
           };
         }
-
         return { data: responseData, totalItemCount };
       } catch (error) {
         if (error.message === "Invalid _id format") {
@@ -175,7 +166,6 @@ class BaseController {
 
   async create(req, res, modelName) {
     const i18nMessages = this.loadI18nMessages(req.query.lang || "en");
-
     return this.executeOperation(req, res, modelName, async model => {
       const modelData = req.body;
       const data = await model.create(modelData);
@@ -187,7 +177,6 @@ class BaseController {
     return this.executeOperation(req, res, modelName, async model => {
       const { modelId } = req.params;
       const { updatedData } = req.body;
-
       const updatedModel = await model.update(modelId, updatedData);
       if (!updatedModel) {
         return { message: i18nMessages[`${modelName}NotFound`] };
@@ -200,7 +189,6 @@ class BaseController {
   async delete(req, res, modelName) {
     return this.executeOperation(req, res, modelName, async model => {
       const { modelId } = req.params;
-
       const deletedModel = await model.delete(modelId);
       if (!deletedModel) {
         return { message: i18nMessages[`${modelName}NotFound`] };
